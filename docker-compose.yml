@@ -15,14 +15,14 @@ services:
       - ./rsyslog/conf:/config
 
   influxdb:
-    image: InfluxData/influxdb
+    image: influxdata/influxdb
     ports: 
       - '8086:8086'
     env_file:
       - ./.environment.env
 
   telegraf:
-    image: InfluxData/telegraf
+    image: influxdata/telegraf
     command:
       - '--config.file=/telegraf/telegraf.conf'
     ports: 
