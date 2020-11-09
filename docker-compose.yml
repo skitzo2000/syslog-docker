@@ -21,7 +21,7 @@ services:
     env_file:
       - ./.environment.env
     volumes:
-        - '$pwd/influxdb:/var/lib/influxdb'
+        - './influxdb:/var/lib/influxdb'
 
   telegraf:
     image: telegraf
