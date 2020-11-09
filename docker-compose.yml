@@ -12,7 +12,7 @@ services:
     volumes:
       - ./rsyslog/log:/log
       - ./rsyslog/work:/work
-      - ./rsyslog/conf:/config
+      - ./rsyslog/config:/config
 
   influxdb:
     image: influxdb
@@ -20,6 +20,8 @@ services:
       - '8086:8086'
     env_file:
       - ./.environment.env
+    volumes:
+        - '$pwd/influxdb:/var/lib/influxdb'
 
   telegraf:
     image: telegraf
