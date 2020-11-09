@@ -32,7 +32,7 @@ services:
       - '8094:8094'
       - '8125:8125'
     volumes: 
-      - './telegraf/telegraf.conf:/telegraf/telegraf.conf'
+      - './telegraf/:/telegraf/'
 
   grafana:
     image: grafana/grafana
