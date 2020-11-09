@@ -33,6 +33,8 @@ services:
       - '8125:8125'
     volumes: 
       - './telegraf/:/telegraf/'
+    env_file:
+      - ./.environment.env
 
   grafana:
     image: grafana/grafana
