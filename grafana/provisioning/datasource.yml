@@ -1,0 +1,13 @@
+apiVersion: 1
+
+datasources:
+  - name: influxdb
+    type: influxdb
+    access: proxy
+    database: ${SYSLOG_DB_NAME}
+    user: ${SYSLOG_USER}
+    url: http://influxdb:8086
+    jsonData:
+      timeInterval: "15s"
+    secureJsonData:
+      password: ${SYSLOG_PASSWORD}
