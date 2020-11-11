@@ -24,7 +24,8 @@ services:
         - './influxdb:/var/lib/influxdb'
 
   telegraf:
-    requires: influxdb
+    depends_on:
+      - influxdb
     image: telegraf
     command:
       - '--config=/telegraf/telegraf.conf'
