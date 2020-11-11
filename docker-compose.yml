@@ -4,7 +4,7 @@ services:
   rsyslog:
     image: rsyslog/syslog_appliance_alpine
     ports: 
-      - '513:514'
+      - '514:514'
       - '1601:1601'
       - '6514:6514'
     environment:
